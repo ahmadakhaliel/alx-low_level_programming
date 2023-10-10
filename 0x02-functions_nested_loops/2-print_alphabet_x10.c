@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- * _islower - function to check 
+ * _islower - function to check
 */
-
 void print_alphabet_x10(void)
 {
 	int line, ch;
