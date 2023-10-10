@@ -1,15 +1,14 @@
 #include "main.h"
 
 /**
- * print_alphabet_10x - function that will print alpha 10 times
- *
+ * _islower - function to check 
 */
 
 void print_alphabet_x10(void)
 {
 	int line, ch;
 
-	for (line = 0; line <= 9; line++)
+	for (line = 0 ; line <= 9; line++)
 	{
 		for (ch = 'a'; ch <= 'z'; ch++)
 			_putchar(ch);
