@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _islower - function to check
+ * print_alphabet_x10 - function to check
 */
 void print_alphabet_x10(void)
 {
