@@ -3,7 +3,7 @@
 /**
  * more_numbers - prints 0 - 14
  *
- * Return: Always 0
+ * Return: Always 0 (success)
 */
 
 void more_numbers(void)
@@ -22,5 +22,6 @@ void more_numbers(void)
 			}
 			_putchar(num + 48);
 		}
+		_putchar('\n');
 	}
 }
