@@ -5,7 +5,7 @@
  *
  * @s: input strinh
  *
- * Return: counter
+ * Return: length of
 */
 
 int _strlen(char *s)
@@ -16,3 +16,4 @@ int _strlen(char *s)
 		++counter;
 
 	return (counter);
+}
