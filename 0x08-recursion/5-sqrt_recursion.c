@@ -1,51 +1,32 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- *  _sqrt_recursion_h - helping function
- *  @n: integer
- *  @start: integer
- *  @end: integer
- *  Return: -
+ * _sqrt_recursion - find nat squ root
+ * @n: int
+ * @va: sq root
+ * Return: int
 */
 
-int _sqrt_recursion_h(int n, int start, int end)
-{
-	if (start > end)
-	{
-		return (-1);
-	}
-
-	int mid = (start + end) / 2;
-	int square = mid * mid;
-
-	if (square == n)
-	{
-		return (mid);
-	}
-
-	else if (square > n)
-	{
-		return (_sqrt_recursion_h(n, start, mid - 1));
-	}
-	else
-	{
-		return (_sqrt_recursion_h(n, mid + 1, end));
-	}
-}
-
-/**
- * _sqrt_recursion - fun return natural sq.root of number
- * @n: number
- * Return: -
-*/
-
+int square(int n, int va);
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-	{
-		return (-1);
-	}
-	return (_sqrt_recursion_h(n, 0, n));
+	return (square(n, 1));
 }
 
+/**
+ * square - finds sq root
+ * @n: int
+ * @va: sq root
+ * Return: int
+*/
+
+int square(int n, int va)
+{
+	if (va * va == n)
+		return (va);
+	else if (va * va < n)
+		return (square(n, va + 1));
+
+	else
+		return (-1);
+}
