@@ -29,11 +29,11 @@ int is_prime_recursive(int n, int divi)
 }
 
 /**
- * is_prime - function to check
+ * is_prime_number - function to check
  * @n: integer
  * Return: -
 */
-int is_prime(int n)
+int is_prime_number(int n)
 {
 	int divi = n - 1;
 
