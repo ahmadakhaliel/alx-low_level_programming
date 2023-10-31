@@ -1,10 +1,31 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * main - check the code for ALX School students.
- *
- * Return: Always 0.
- */
-int main(void)
+ * *_strdup - function that returns a pointer
+ *	to a newly allocated space in memory
+ * @str: string
+ * Return: 0
+*/
+
+char *_strdup(char *str)
+{
+	int i = 0, size = 0;
+	char *m;
+
+	if (str == NULL)
+		return (NULL);
+	for (; str[size] != '\0', size++ ;)
+
+	m = malloc(size * sizeof(*str) + 1);
+	if (m == 0)
+		return (NULL);
+	else if
+	{
+		for (i < size; i++ ;)
+			m[i] = str[size];
+	}
+	return (m);
+}
+
+
