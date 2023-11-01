@@ -1,41 +1,53 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include "main.h"
 
 /**
- * *argstostr - concatenates *arguments of a program
- * @ac: int
- * @av: pointer
- * Return: result
+ * _strlen - length of string
+ * @s: string
+ * Return: int
 */
 
-char *argstostr(int ac, char **av) 
+int _strlen(char *s)
 {
-    if (ac == 0 || av == NULL) 
-    {
-        return (NULL);
-    }
+	int size = 0;
 
-    int total_length = 0;
-    
-    for (int i = 0; i < ac; i++) 
-    {
-        total_length += strlen(av[i]) + 1; // +1 for the newline character
-    }
+	for (; s[size] != '\0'; size++)
+	;
+	return (size);
+}
 
-    char *result = malloc(sizeof(char) * total_length);
-    if (result == NULL) 
-    {
-        return (NULL);
-    }
+/**
+ * *argstostr - fn
+ * @ac: int
+ * @av: argu
+ * Return: string
+*/
 
-    int current_index = 0;
-    
-    for (int i = 0; i < ac; i++) 
-    {
-        strcpy(result + current_index, av[i]);
-        current_index += strlen(av[i]);
-        result[current_index] = '\n';
-        current_index++;
-    }
+char *argstostr(int ac, char **av)
+
+{
+	int i = 0, nc = 0, j = 0, cmpt = 0;
+	char *s;
+
+	if (ac == 0 || av == NULL)
+		return (NULL);
+
+	for (; i < ac; i++, nc++)
+		nc += _strlen(av[i]);
+
+	s = malloc(sizeof(char) * nc + 1);
+	if (s == 0)
+		return (NULL);
+
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++, cmpt++)
+			s[cmpt] = av[i][j];
+
+		s[cmpt] = '\n';
+		cmpt++;
+	}
+	s[cmpt] = '\0';
+	return (s);
 }
