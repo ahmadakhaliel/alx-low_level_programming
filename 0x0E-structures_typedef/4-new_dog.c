@@ -26,11 +26,5 @@ struct dog *new_dog(char *name, float age, char *owner)
         free(newDog->owner);
         free(newDog);
         return (NULL); 
-    }
-
-    strcpy(newDog->name, name);
-    newDog->age = age;
-    strcpy(newDog->owner, owner);
-
-    return (newDog);
+   ;
 }
