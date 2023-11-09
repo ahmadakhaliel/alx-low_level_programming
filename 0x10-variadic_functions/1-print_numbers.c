@@ -9,9 +9,9 @@
  * Return: the resulting numbers
  */
 
-void print_numbers(const char *separator, const unsigned int n, ...);
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int;
+	unsigned int i;
 	va_list pri;
 
 	va_start(pri, n);
